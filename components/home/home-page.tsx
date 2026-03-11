@@ -87,13 +87,13 @@ function IntentStars({ level }: { level: number }) {
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-background pb-24">
+    <div className="min-h-screen bg-background p-[20px] pb-[80px]">
       {/* 顶部区域 */}
-      <div className="gradient-primary px-[20px] pt-12 pb-8">
-        <div className="flex items-center justify-between mb-6">
+      <div className="gradient-primary rounded-xl px-[16px] pt-[20px] pb-[20px] -mx-0">
+        <div className="flex items-center justify-between mb-[16px]">
           <div>
-            <h1 className="text-base font-bold text-white">保险线索交易平台</h1>
-            <p className="text-xs text-white/80 mt-1">获取精准客户，提升成交转化</p>
+            <h1 className="text-[16px] font-bold text-white">保险线索交易平台</h1>
+            <p className="text-[12px] text-white/80 mt-1">获取精准客户，提升成交转化</p>
           </div>
           <button className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
             <Bell className="w-5 h-5 text-white" />
@@ -104,27 +104,27 @@ export function HomePage() {
         <Link href="/leads" className="block">
           <div className="bg-white rounded-full px-4 py-2.5 flex items-center gap-2">
             <Search className="w-4 h-4 text-muted" />
-            <span className="text-xs text-muted">搜索线索、地区、险种...</span>
+            <span className="text-[12px] text-muted">搜索线索、地区、险种...</span>
           </div>
         </Link>
       </div>
 
       {/* 数据统计 */}
-      <div className="px-[20px] -mt-4">
-        <div className="bg-card rounded-xl shadow-sm p-4">
+      <div className="mt-[20px]">
+        <div className="bg-card rounded-xl shadow-sm p-[16px]">
           <div className="flex items-center justify-around">
             <div className="text-center">
-              <p className="text-base font-bold text-primary">1,280</p>
+              <p className="text-[16px] font-bold text-primary">1,280</p>
               <p className="text-[10px] text-muted mt-1">今日新增线索</p>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
-              <p className="text-base font-bold text-primary">95%</p>
+              <p className="text-[16px] font-bold text-primary">95%</p>
               <p className="text-[10px] text-muted mt-1">成交转化率</p>
             </div>
             <div className="w-px h-8 bg-border" />
             <div className="text-center">
-              <p className="text-base font-bold text-primary">0</p>
+              <p className="text-[16px] font-bold text-primary">0</p>
               <p className="text-[10px] text-muted mt-1">撮合手续费</p>
             </div>
           </div>
@@ -132,7 +132,7 @@ export function HomePage() {
       </div>
 
       {/* 快捷入口 */}
-      <div className="px-[20px] mt-[20px]">
+      <div className="mt-[20px]">
         <div className="grid grid-cols-4 gap-4">
           {quickActions.map((action) => (
             <Link 
@@ -153,7 +153,7 @@ export function HomePage() {
       </div>
 
       {/* 热门线索 */}
-      <div className="px-[20px] mt-[20px]">
+      <div className="mt-[20px]">
         <div className="flex items-center justify-between mb-[12px]">
           <h2 className="text-[14px] font-semibold text-foreground">热门线索</h2>
           <Link 
@@ -168,7 +168,7 @@ export function HomePage() {
         <div className="flex flex-col gap-[12px]">
           {hotLeads.map((lead) => (
             <Link key={lead.id} href={`/leads/${lead.id}`}>
-              <div className="bg-card rounded-xl shadow-sm p-4 active-scale">
+              <div className="bg-card rounded-xl shadow-sm p-[16px] active-scale">
                 {/* 顶部标签行 */}
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
@@ -230,31 +230,31 @@ export function HomePage() {
       </div>
 
       {/* 平台优势 */}
-      <div className="px-[20px] mt-[20px] mb-[20px]">
+      <div className="mt-[20px]">
         <h2 className="text-[14px] font-semibold text-foreground mb-[12px]">平台优势</h2>
         <div className="grid grid-cols-2 gap-[12px]">
-          <div className="bg-card rounded-xl shadow-sm p-4">
+          <div className="bg-card rounded-xl shadow-sm p-[16px]">
             <div className="w-10 h-10 bg-primary-light rounded-xl flex items-center justify-center mb-3">
               <Shield className="w-5 h-5 text-primary" />
             </div>
             <h3 className="text-xs font-medium text-foreground mb-1">24小时售后保护</h3>
             <p className="text-[10px] text-muted leading-relaxed">购买后享受24小时售后保障期</p>
           </div>
-          <div className="bg-card rounded-xl shadow-sm p-4">
+          <div className="bg-card rounded-xl shadow-sm p-[16px]">
             <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-3">
               <Zap className="w-5 h-5 text-info" />
             </div>
             <h3 className="text-xs font-medium text-foreground mb-1">AI智能校验</h3>
             <p className="text-[10px] text-muted leading-relaxed">防撞单、空号检测、价值评估</p>
           </div>
-          <div className="bg-card rounded-xl shadow-sm p-4">
+          <div className="bg-card rounded-xl shadow-sm p-[16px]">
             <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center mb-3">
               <TrendingUp className="w-5 h-5 text-success" />
             </div>
             <h3 className="text-xs font-medium text-foreground mb-1">0手续费</h3>
             <p className="text-[10px] text-muted leading-relaxed">平台不收取任何撮合手续费</p>
           </div>
-          <div className="bg-card rounded-xl shadow-sm p-4">
+          <div className="bg-card rounded-xl shadow-sm p-[16px]">
             <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center mb-3">
               <Users className="w-5 h-5 text-accent" />
             </div>
