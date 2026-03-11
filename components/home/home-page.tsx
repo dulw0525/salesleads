@@ -87,9 +87,9 @@ function IntentStars({ level }: { level: number }) {
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-24">
       {/* 顶部区域 */}
-      <div className="gradient-primary px-5 pt-12 pb-8">
+      <div className="gradient-primary px-[20px] pt-12 pb-8">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-base font-bold text-white">保险线索交易平台</h1>
@@ -110,7 +110,7 @@ export function HomePage() {
       </div>
 
       {/* 数据统计 */}
-      <div className="px-5 -mt-4">
+      <div className="px-[20px] -mt-4">
         <div className="bg-card rounded-xl shadow-sm p-4">
           <div className="flex items-center justify-around">
             <div className="text-center">
@@ -132,7 +132,7 @@ export function HomePage() {
       </div>
 
       {/* 快捷入口 */}
-      <div className="px-5 mt-5">
+      <div className="px-[20px] mt-[20px]">
         <div className="grid grid-cols-4 gap-4">
           {quickActions.map((action) => (
             <Link 
@@ -153,9 +153,9 @@ export function HomePage() {
       </div>
 
       {/* 热门线索 */}
-      <div className="px-5 mt-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-sm font-semibold text-foreground">热门线索</h2>
+      <div className="px-[20px] mt-[20px]">
+        <div className="flex items-center justify-between mb-[12px]">
+          <h2 className="text-[14px] font-semibold text-foreground">热门线索</h2>
           <Link 
             href="/leads" 
             className="flex items-center gap-1 text-xs text-primary"
@@ -165,7 +165,7 @@ export function HomePage() {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-[12px]">
           {hotLeads.map((lead) => (
             <Link key={lead.id} href={`/leads/${lead.id}`}>
               <div className="bg-card rounded-xl shadow-sm p-4 active-scale">
@@ -230,9 +230,9 @@ export function HomePage() {
       </div>
 
       {/* 平台优势 */}
-      <div className="px-5 mt-6 mb-6">
-        <h2 className="text-sm font-semibold text-foreground mb-4">平台优势</h2>
-        <div className="grid grid-cols-2 gap-3">
+      <div className="px-[20px] mt-[20px] mb-[20px]">
+        <h2 className="text-[14px] font-semibold text-foreground mb-[12px]">平台优势</h2>
+        <div className="grid grid-cols-2 gap-[12px]">
           <div className="bg-card rounded-xl shadow-sm p-4">
             <div className="w-10 h-10 bg-primary-light rounded-xl flex items-center justify-center mb-3">
               <Shield className="w-5 h-5 text-primary" />
