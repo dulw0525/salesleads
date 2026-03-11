@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { Home, Search, PlusCircle, ShoppingBag, User } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 const navItems = [
   { icon: Home, label: "首页", href: "/" },
@@ -15,6 +16,19 @@ const navItems = [
 
 export function BottomNav() {
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[375px] bg-card border-t border-border safe-area-bottom z-50">
+        <div className="flex items-center justify-around h-14" />
+      </nav>
+    )
+  }
 
   return (
     <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[375px] bg-card border-t border-border safe-area-bottom z-50">
