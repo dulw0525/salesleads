@@ -66,7 +66,7 @@ const hotLeads = [
 // 功能入口
 const quickActions = [
   { icon: Search, label: "线索大厅", href: "/leads", color: "#00bc71" },
-  { icon: TrendingUp, label: "发布线索", href: "/publish", color: "#1890ff" },
+  { icon: TrendingUp, label: "分享线索", href: "/share", color: "#1890ff" },
   { icon: Users, label: "我的客户", href: "/customers", color: "#722ed1" },
   { icon: Shield, label: "售后申诉", href: "/complaints", color: "#fa8c16" },
 ]

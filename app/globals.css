@@ -103,3 +103,121 @@ body {
 .gradient-primary {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 }
+
+/* AI 科技感 Glow 特效 */
+.glow-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 188, 113, 0.15) 60deg,
+    transparent 120deg
+  );
+  animation: glow-rotate 4s linear infinite;
+  pointer-events: none;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.glow-effect > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes glow-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 脉冲光效 */
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 188, 113, 0.3), 0 0 10px rgba(0, 188, 113, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 188, 113, 0.5), 0 0 30px rgba(0, 188, 113, 0.3);
+  }
+}
+
+/* 边框流光效果 */
+.border-glow {
+  position: relative;
+  background: linear-gradient(var(--color-card), var(--color-card)) padding-box,
+              linear-gradient(135deg, var(--color-primary), var(--color-primary-light), var(--color-primary)) border-box;
+  border: 1px solid transparent;
+}
+
+/* 文字渐变 */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #00d68f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 浮动动画 */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 闪烁点效果 */
+.shimmer-dot {
+  position: relative;
+}
+
+.shimmer-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}

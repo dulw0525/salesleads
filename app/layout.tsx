@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className="font-sans antialiased">
-        <div className="mx-auto w-full max-w-[375px] min-h-screen bg-background shadow-xl">
+        <div className="mx-auto w-full min-w-[375px] max-w-[430px] min-h-screen bg-background shadow-xl">
           {children}
         </div>
       </body>

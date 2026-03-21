@@ -24,14 +24,14 @@ export function BottomNav() {
 
   if (!mounted) {
     return (
-      <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[375px] bg-card border-t border-border safe-area-bottom z-50">
+      <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full min-w-[375px] max-w-[430px] bg-card border-t border-border safe-area-bottom z-50">
         <div className="flex items-center justify-around h-14" />
       </nav>
     )
   }
 
   return (
-    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[375px] bg-card border-t border-border safe-area-bottom z-50">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full min-w-[375px] max-w-[430px] bg-card border-t border-border safe-area-bottom z-50">
       <div className="flex items-center justify-around h-14">
         {navItems.map((item) => {
           const isActive = pathname === item.href || 
